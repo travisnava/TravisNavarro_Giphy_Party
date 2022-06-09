@@ -1,7 +1,6 @@
 
 
 // global constants
-//const apiKey = AIzaSyDgKyDy5h8nVBo0NSDLky9qj0SXSWrz_eQ        (MY TENOR API KEY)
 
 
 const apiKey = "z9qEJKCAcrrMCA7q77qHJXLDkv111Kra"  // TA'S API KEY
@@ -14,6 +13,9 @@ let searchBtn = document.querySelector("#search-btn");
 let loadBtn = document.querySelector("#load-btn");
 let gifFeed = document.querySelector("#gif-feed");
 
+let current_page_num = 0;
+
+
 
 
 giphyForm.addEventListener("submit", (evt) => {
@@ -25,7 +27,7 @@ giphyForm.addEventListener("submit", (evt) => {
     gifFeed.innerHTML = ""
     console.log(getResults(apiUrl));
     form.reset();
-    loadBtn.classList.remove('hidden');
+    
     
 
     
@@ -50,15 +52,13 @@ function displayResults(gifData) {
 }
 
  
+function ShowMore() {
 
+}
 
 
     
 
 
 
-
-    //gifData.data.forEach((gif) => {
-    //    gifFeed.innerHTML += `<img src="${gif.images.original.url}">`
-    //});
 
